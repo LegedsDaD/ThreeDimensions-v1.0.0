@@ -35,7 +35,7 @@ Do check out [Main Repository](https://github.com/LegedsDaD/ThreeDimensions)
 ## Installation
 
 ```bash
-pip install pip install threedimensions==1.1.1
+pip install pip install threedimensions==1.0.0
 ```
 
 Optional viewer dependencies:
@@ -94,6 +94,7 @@ with td.viewer() as scene:
 ## License
 
 MIT
+
 
 
 
