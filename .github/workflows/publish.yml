@@ -9,7 +9,6 @@ permissions:
 
 jobs:
   build-wheels:
-    name: Build wheels on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -27,10 +26,11 @@ jobs:
         run: pip install cibuildwheel build
 
       - name: Build wheels
+        env:
+          CIBW_ARCHS_WINDOWS: AMD64
         run: cibuildwheel --output-dir dist
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: wheels-${{ matrix.os }}
           path: dist/*.whl
