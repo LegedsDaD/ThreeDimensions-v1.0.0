@@ -1,9 +1,12 @@
 #pragma once
 #include <vector>
+
 #include "Vertex.h"
 #include "HalfEdge.h"
 #include "Face.h"
 #include "Edge.h"
+
+using ThreeDimensions::Math::Vec3;
 
 class Mesh {
 public:
@@ -12,9 +15,6 @@ public:
     std::vector<Face*> faces;
     std::vector<Edge*> edges;
 
-    Vertex* createVertex(const Vector3& pos);
+    Vertex* createVertex(const Vec3& pos);
     Face* createQuad(Vertex* v1, Vertex* v2, Vertex* v3, Vertex* v4);
-
-    void buildTwins();
-    void clear();
 };
