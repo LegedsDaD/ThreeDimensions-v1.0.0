@@ -13,7 +13,7 @@ void extrudeFace(Mesh& mesh, Face* face, double distance)
 
     // Duplicate vertices
     do {
-        Vec3 newPos = he->vertex->position + Vector3(0, 0, distance);
+        Vector3 newPos = he->vertex->position + Vector3(0, 0, distance);
         newVertices.push_back(mesh.createVertex(newPos));
         he = he->next;
     } while (he != start);
@@ -38,3 +38,4 @@ void extrudeFace(Mesh& mesh, Face* face, double distance)
     mesh.buildTwins();
 
 }
+
