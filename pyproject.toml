@@ -1,20 +1,19 @@
 [build-system]
-requires = ["setuptools>=61", "wheel", "pybind11"]
-build-backend = "setuptools.build_meta"
+requires = [
+  "scikit-build-core>=0.9",
+  "pybind11>=2.12"
+]
+build-backend = "scikit_build_core.build"
 
 [project]
 name = "threedimensions"
 version = "1.0.0"
 description = "Professional Hybrid 3D Modeling Engine (C++ Core + Python API)"
-authors = [{name = "LegedsDaD"}]
-requires-python = ">=3.11"
+authors = [{ name = "LegedsDaD" }]
 readme = "README.md"
-license = "MIT"
+requires-python = ">=3.11"
+license = { text = "MIT" }
 
-[tool.setuptools]
-package-dir = {"" = "python"}
-
-[tool.setuptools.packages.find]
-where = ["python"]
-
-
+[tool.scikit-build]
+wheel.packages = ["python/threedimensions"]
+build-dir = "build/{wheel_tag}"
