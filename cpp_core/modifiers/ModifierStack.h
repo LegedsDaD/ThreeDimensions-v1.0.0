@@ -12,4 +12,4 @@ public:
     void applyAll(Mesh& mesh);
 
     int count() const;
-}; #pragma once
+};
