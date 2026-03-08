@@ -1,5 +1,7 @@
 # ThreeDimensions
 
+## Send your creations using ThreeDimensions in [Models](https://github.com/LegedsDaD/Models) by filling in the [Form](https://forms.gle/Z8WpocwLCv92MZU17). The best models will be added to the examples of ThreeDimensions. Others will be added to the models groups. See current submissions in [Submissions](https://github.com/LegedsDaD/Models/blob/main/README.md). Do participate !
+
 ThreeDimensions is a programmable 3D modeling library for Python, backed by a C++ geometry kernel for heavy mesh operations.
 
 Do check out [Main Repository](https://github.com/LegedsDaD/ThreeDimensions)
@@ -92,6 +94,7 @@ with td.viewer() as scene:
 ## License
 
 MIT
+
 
 
 
