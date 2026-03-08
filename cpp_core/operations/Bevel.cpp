@@ -1,22 +1,15 @@
 #include "Bevel.h"
 #include "../math/Vector3.h"
-using ThreeDimensions::Math::Vec3;
 
-void bevelEdge(Mesh& mesh, Edge* edge, double width)
+using ThreeDimensions::Math::Vector3;
+
+void Bevel::apply(HalfEdge* he, float width)
 {
-    if (!edge || !edge->halfEdge) return;
-
-    HalfEdge* he = edge->halfEdge;
     HalfEdge* twin = he->twin;
 
-    if (!twin) return;
-
     Vector3 dir = he->vertex->position - twin->vertex->position;
-    Vector3 offset = dir * (width * 0.5);
+    Vector3 offset = dir * (width * 0.5f);
 
-    he->vertex->position = he->vertex->position + offset;
-    twin->vertex->position = twin->vertex->position - offset;
-
+    he->vertex->position += offset;
+    twin->vertex->position -= offset;
 }
-
-
