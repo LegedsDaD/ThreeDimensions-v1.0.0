@@ -8,4 +8,4 @@ public:
     virtual void apply(Mesh& mesh) = 0;
 
     virtual ~Modifier() {}
-}; #pragma once
+};
