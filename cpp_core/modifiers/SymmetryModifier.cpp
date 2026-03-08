@@ -1,5 +1,5 @@
 #include "SymmetryModifier.h"
-
+#include "../math/Vector3.h"
 using ThreeDimensions::Math::Vec3;
 
 void SymmetryModifier::apply(Mesh& mesh)
@@ -21,4 +21,5 @@ void SymmetryModifier::apply(Mesh& mesh)
     mesh.buildTwins();
 
 }
+
 
