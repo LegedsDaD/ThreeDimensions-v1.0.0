@@ -2,11 +2,15 @@
 
 ThreeDimensions is a programmable 3D modeling library for Python.
 
-Version: `1.1.1`
+Version: `1.0.0`
 
 The package is now Python-only. No C++ extension build is required at install or runtime.
 
 ## Installation
+```bash
+pip install threedimensions
+```
+
 
 ```bash
 pip install .
